@@ -1,7 +1,7 @@
 """
 Run this script using the following command:
 
-    python fgsm_yolo_eval.py --model_name "name" --max_samples "max_samples" --epsilon "epsilon"
+    python yolo_eval.py --model_name "name" --max_samples "max_samples"
 
 list of names:[
                     "yolov5s",
@@ -14,7 +14,6 @@ list of names:[
             ]
             
 max_samples: any integer value, default is 1000
-epsilon: any float value, default is 0.05
 """
 
 # Import required libraries
@@ -29,19 +28,12 @@ from pycocotools.cocoeval import COCOeval
 import argparse
 import sys
 import io
-import numpy as np
-import matplotlib.pyplot as plt
-import torch
-import torchvision.transforms as transforms
-import cv2
 import os
-
 
 # Parse command-line arguments
 parser = argparse.ArgumentParser(description="Run YOLO model inference on COCO dataset")
 parser.add_argument("--model_name", type=str, required=True, help="Name of the YOLO model file (without .pt)")
 parser.add_argument("--max_samples", type=int, default=1000, help="Maximum number of samples to evaluate (default: 1000)")
-parser.add_argument("--epsilon", type=float, default=0.05, help="Perturbation magnitude for FGSM (default: 0.05)")
 args = parser.parse_args()
 
 
@@ -86,68 +78,16 @@ yolo_classes = {
 # Load the YOLO model
 # Use the provided model name
 name = args.model_name
-model_inf = YOLO(f'{name}.pt')  # Use the YOLO model
-model_inf.model.eval()  # Set the model in evaluation mode
-
-model_train = YOLO(f'{name}.pt')  # Use the YOLO model for training
-model_train.model.train()  # Set the model in training mode
-
-# Set device
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model_train.model.to(device)
-model_inf.model.to(device)
-
-transform = transforms.Compose([
-    transforms.Resize((640, 640)),  # Resize to YOLO input size
-    transforms.ToTensor()
-])
-
-os.makedirs(f'fgsm_images/{name}/epsilon_{args.epsilon}/', exist_ok=True)
+model = YOLO(f'{name}.pt')  # Use the YOLO model
 
 predictions = []
 
 for sample in dataset:
-    
     image_id = int(sample.filepath.split('\\')[-1].split('.')[0])
-    
-    if not os.path.exists(f'fgsm_images/{name}/epsilon_{args.epsilon}/adv_image_{image_id}.jpg'):
-        
-        image = Image.open(sample.filepath).convert('RGB')
-        input_tensor = transform(image).unsqueeze(0).to(device)  # Add batch dimension
-        input_tensor.requires_grad = True  # Enable gradients
-
-        # Perform inference using the raw PyTorch model
-        output = model_train.model(input_tensor)  # Returns raw tensor outputs
-
-        # Ensure the output requires gradients
-        if isinstance(output, (list, tuple)):
-            output = output[0]  # Extract first tensor if multiple
-            
-        output = output.requires_grad_()  # Ensure gradient tracking
-
-        # Compute loss (use highest confidence detection as target)
-        loss = output[..., 4].max()  # Objectness score (simplified attack)
-        model_train.model.zero_grad()  # Clear previous gradients
-        loss.backward()  # Compute gradients
-
-        # Generate FGSM adversarial perturbation
-        perturbation = args.epsilon * input_tensor.grad.sign()
-
-        # Create adversarial image
-        adv_image_tensor = input_tensor + perturbation
-        adv_image_tensor = torch.clamp(adv_image_tensor, 0, 1)  # Keep pixel values valid
-
-        # Convert adversarial image tensor to NumPy
-        adv_image_np = adv_image_tensor.squeeze().permute(1, 2, 0).detach().cpu().numpy()
-        adv_image_np = (adv_image_np * 255).astype(np.uint8)
-
-        # Save adversarial image
-        cv2.imwrite(f'fgsm_images/{name}/epsilon_{args.epsilon}/adv_image_{image_id}.jpg', cv2.cvtColor(adv_image_np, cv2.COLOR_RGB2BGR))
-        
-    image = Image.open(f'fgsm_images/{name}/epsilon_{args.epsilon}/adv_image_{image_id}.jpg')
+    image = Image.open(sample.filepath)
 
     # Perform inference
-    results = model_inf.predict(image, imgsz=640)  # Specify the input size if needed
+    results = model.predict(image, imgsz=640)  # Specify the input size if needed
     detections = results[0].boxes  # Extract bounding boxes
 
     # Convert detections to the required format
@@ -162,10 +102,10 @@ for sample in dataset:
             "bbox": [float(x1), float(y1), float(width), float(height)],
             "score": float(conf)
         })
-
-os.makedirs(f'predictions/fgsm/epsilon_{args.epsilon}/', exist_ok=True)
+        
+os.makedirs(f'predictions/baseline/', exist_ok=True)
 # Save predictions
-with open(f"predictions/fgsm/epsilon_{args.epsilon}/predictions_{name}.json", "w") as f:
+with open(f"predictions/baseline/predictions_{name}.json", "w") as f:
     json.dump(predictions, f, indent=4)
 
 
@@ -173,7 +113,7 @@ with open(f"predictions/fgsm/epsilon_{args.epsilon}/predictions_{name}.json", "w
 coco_gt = COCO("instances_val2017.json")
 
 # Load predictions
-coco_dt = coco_gt.loadRes(f"predictions/fgsm/epsilon_{args.epsilon}/predictions_{name}.json")
+coco_dt = coco_gt.loadRes(f"predictions/baseline/predictions_{name}.json")
 imgIds=sorted(coco_gt.getImgIds())
 imgIds=imgIds[0:1000]
 imgId = imgIds[np.random.randint(1000)]
@@ -193,9 +133,9 @@ coco_eval.summarize()
 
 # Restore stdout
 sys.stdout = sys.__stdout__
-os.makedirs(f'evaluation/fgsm/epsilon_{args.epsilon}/', exist_ok=True)
+
 # Save the captured output to a file
-with open(f"evaluation/fgsm/epsilon_{args.epsilon}/evaluation_results_{name}.txt", "w") as f:
+with open(f"evaluation/baseline/evaluation_results_{name}.txt", "w") as f:
     f.write(output_buffer.getvalue())
 
 # Optionally, print a message to confirm
