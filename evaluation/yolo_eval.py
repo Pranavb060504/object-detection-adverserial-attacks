@@ -1,7 +1,7 @@
 """
 Run this script using the following command:
 
-    python eval.py --model_name "name"
+    python yolo_eval.py --model_name "name" --max_samples "max_samples"
 
 list of names:[
                     "yolov5s",
@@ -14,6 +14,8 @@ list of names:[
                     "yolo11m",
                     "yolo11x",
             ]
+            
+max_samples: any integer value, default is 1000
 """
 
 # Import required libraries
@@ -32,6 +34,7 @@ import io
 # Parse command-line arguments
 parser = argparse.ArgumentParser(description="Run YOLO model inference on COCO dataset")
 parser.add_argument("--model_name", type=str, required=True, help="Name of the YOLO model file (without .pt)")
+parser.add_argument("--max_samples", type=int, default=1000, help="Maximum number of samples to evaluate (default: 1000)")
 args = parser.parse_args()
 
 
@@ -39,7 +42,8 @@ args = parser.parse_args()
 dataset = foz.load_zoo_dataset(
     "coco-2017",
     split="validation",
-    max_samples = 1000,
+    max_samples = args.max_samples,
+    # Use the provided max_samples argument
     label_types=["detections"],
     )
 
