@@ -22,7 +22,7 @@ import sys
 import io
 
 # Parse command-line arguments
-parser = argparse.ArgumentParser(description="Run YOLO model inference on COCO dataset")
+parser = argparse.ArgumentParser(description="Run faster-rcnn model inference on COCO dataset")
 parser.add_argument("--max_samples", type=int, default=1000, help="Maximum number of samples to evaluate (default: 1000)")
 args = parser.parse_args()
 
