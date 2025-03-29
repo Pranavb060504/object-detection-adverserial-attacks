@@ -165,9 +165,9 @@ for sample in dataset:
             "score": float(conf)
         })
 
-os.makedirs(f'fgsm_predictions/{name}/epsilon_{args.epsilon}/', exist_ok=True)
+os.makedirs(f'predictions/fgsm/epsilon_{args.epsilon}/', exist_ok=True)
 # Save predictions
-with open(f"fgsm_predictions/{name}/epsilon_{args.epsilon}/fgsm_predictions_{name}_{args.epsilon}.json", "w") as f:
+with open(f"predictions/fgsm/epsilon_{args.epsilon}/predictions_{name}.json", "w") as f:
     json.dump(predictions, f, indent=4)
 
 
@@ -175,7 +175,7 @@ with open(f"fgsm_predictions/{name}/epsilon_{args.epsilon}/fgsm_predictions_{nam
 coco_gt = COCO("instances_val2017.json")
 
 # Load predictions
-coco_dt = coco_gt.loadRes(f"fgsm_predictions/{name}/epsilon_{args.epsilon}/fgsm_predictions_{name}_{args.epsilon}.json")
+coco_dt = coco_gt.loadRes(f"predictions/fgsm/epsilon_{args.epsilon}/predictions_{name}.json")
 imgIds=sorted(coco_gt.getImgIds())
 imgIds=imgIds[0:1000]
 imgId = imgIds[np.random.randint(1000)]
@@ -195,9 +195,9 @@ coco_eval.summarize()
 
 # Restore stdout
 sys.stdout = sys.__stdout__
-os.makedirs(f'evaluation/fgsm/{name}/epsilon_{args.epsilon}/', exist_ok=True)
+os.makedirs(f'evaluation/fgsm/epsilon_{args.epsilon}/', exist_ok=True)
 # Save the captured output to a file
-with open(f"evaluation/fgsm/{name}/epsilon_{args.epsilon}/evaluation_results_{name}.txt", "w") as f:
+with open(f"evaluation/fgsm/epsilon_{args.epsilon}/evaluation_results_{name}.txt", "w") as f:
     f.write(output_buffer.getvalue())
 
 # Optionally, print a message to confirm
