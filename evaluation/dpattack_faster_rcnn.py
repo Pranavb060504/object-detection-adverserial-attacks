@@ -8,13 +8,15 @@ import os
 
 def dpattack_faster_rcnn(image_path, epsilon=1, iterations=100, grid_size=10, target_confidence=0.25, confidence_threshold=0.5, nms_threshold=0.3):
 
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = fasterrcnn_resnet50_fpn(pretrained=True)
+    model.to(device)
     model.eval()
 
     # Load and preprocess the image
     transform = transforms.Compose([transforms.ToTensor()])
     org_image = Image.open(image_path).convert('RGB')
-    org_tensor = transform(org_image).unsqueeze(0)  # Shape: [1, 3, H, W]
+    org_tensor = transform(org_image).unsqueeze(0).to(device)  # Shape: [1, 3, H, W]
 
     # Forward pass to detect objects
     with torch.no_grad():
@@ -40,9 +42,6 @@ def dpattack_faster_rcnn(image_path, epsilon=1, iterations=100, grid_size=10, ta
 
     # Create trainable adversarial perturbation δ
     delta = torch.zeros_like(org_tensor, requires_grad=True)
-
-    # Optimizer for updating δ
-    losses = []
 
     # Adversarial training loop
     for _ in tqdm(range(iterations)):
