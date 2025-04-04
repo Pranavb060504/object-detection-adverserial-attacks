@@ -12,7 +12,7 @@ def get_files(path):
             files.append(os.path.join(root, filename))
     return files
 
-files = get_files('./results/dpattack')
+files = get_files('./results/edge_attack')
 
 def get_table(x, model, attack):
     table = f'''
