@@ -12,7 +12,7 @@ def get_files(path):
             files.append(os.path.join(root, filename))
     return files
 
-files = get_files('./results/fgsm')
+files = get_files('./results/dpattack')
 
 def get_table(x, model, attack):
     table = f'''
@@ -48,7 +48,14 @@ def get_table(x, model, attack):
 
 for file in files:
     model_name = file.split('_results_')[1].split('.')[0]
-    attack_name = file.split('/')[2] + ' @ epsilon = ' + file.split('/')[3].split('_')[1]
+    folder_parts = file.split('/')
+    if len(folder_parts) > 2:
+        # print(folder_parts)
+        attack_name = folder_parts[2] + ' @ epsilon = ' + folder_parts[3].split('_')[1] + ' iters = ' + folder_parts[3].split('_')[3] + ' gridesize = ' + folder_parts[3].split('_')[-1]
+    else:
+        attack_name = "Unknown Attack"
+
+    # print(model_name, attack_name)
 
     with open(file, 'r') as f:
         lines = f.readlines()
