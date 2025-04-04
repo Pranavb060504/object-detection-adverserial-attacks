@@ -57,6 +57,8 @@ def edge_faster_rcnn(image_path, epsilon=1, iterations=100, grid_size=10, target
 
         # Forward pass through the model
         output = model(patched_tensor)
+        if len(output[0]['boxes']) == 0:
+            break
 
         # Compute loss based on confidences
         loss = 0
