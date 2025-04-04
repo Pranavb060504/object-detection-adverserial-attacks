@@ -12,11 +12,11 @@ def get_files(path):
             files.append(os.path.join(root, filename))
     return files
 
-files = get_files('./results/edge_attack')
+files = get_files('./results/fgsm')
 
 def get_table(x, model, attack):
     table = f'''
-\\begin{{table}}[h]
+\\begin{{table}}[h!]
     \\centering
     \\resizebox{{0.5\\textwidth}}{{!}}{{%
     \\begin{{tabular}}{{lccc}}
@@ -49,9 +49,15 @@ def get_table(x, model, attack):
 for file in files:
     model_name = file.split('_results_')[1].split('.')[0]
     folder_parts = file.split('/')
-    if len(folder_parts) > 2:
-        # print(folder_parts)
+    
+    if folder_parts[2] == 'dpattack':
         attack_name = folder_parts[2] + ' @ epsilon = ' + folder_parts[3].split('_')[1] + ' iters = ' + folder_parts[3].split('_')[3] + ' gridesize = ' + folder_parts[3].split('_')[-1]
+    elif folder_parts[2] == 'fgsm':
+        attack_name = folder_parts[2] + ' @ epsilon = ' + folder_parts[3].split('_')[1]
+    elif folder_parts[2] == 'edge_attack':
+        attack_name = folder_parts[2] + ' @ epsilon = ' + folder_parts[3].split('_')[1] + ' iters = ' + folder_parts[3].split('_')[3] + ' gridesize = ' + folder_parts[3].split('_')[-1]
+    elif folder_parts[2] == 'baseline':
+        attack_name = folder_parts[2]
     else:
         attack_name = "Unknown Attack"
 
