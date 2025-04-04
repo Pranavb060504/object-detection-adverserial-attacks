@@ -126,7 +126,7 @@ for sample in dataset:
         output = output.requires_grad_()  # Ensure gradient tracking
 
         # Compute loss (use highest confidence detection as target)
-        loss = output[..., 4].max()  # Objectness score (simplified attack)
+        loss = -output[..., 4].max()  # Objectness score (simplified attack)
         model_train.model.zero_grad()  # Clear previous gradients
         loss.backward()  # Compute gradients
 
