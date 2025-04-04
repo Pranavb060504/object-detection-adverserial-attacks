@@ -25,7 +25,7 @@ output = model(input_tensor)  # Get detections
 output = output[0]  # Extract the first output tensor
 
 # Compute loss (use the highest confidence detection as target)
-loss = output[..., 4].max()  # Objectness score (simplified attack)
+loss = -output[..., 4].max()  # Objectness score (simplified attack)
 model.zero_grad()
 loss.backward()  # Compute gradients
 
