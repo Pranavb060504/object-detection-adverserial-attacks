@@ -8,9 +8,9 @@ M1 = 'dpattack @ epsilon = 0.3 iters = 20 gridesize = 3'
 M2 = 'dpattack @ epsilon = 0.3 iters = 10 gridesize = 3'
 M3 = 'dpattack @ epsilon = 1.0 iters = 10 gridesize = 3' 
 M4 = 'dpattack @ epsilon = 1.0 iters = 20 gridesize = 3'
-M5 = 'fgsm @ epsilon = 0.05'
-M6 = 'fgsm @ epsilon = 0.1'
-M7 = 'fgsm @ epsilon = 0.01'
+M5 = 'fgsm @ epsilon = 0.01'
+M6 = 'fgsm @ epsilon = 0.05'
+M7 = 'fgsm @ epsilon = 0.1'
 
 M = [M0, M1, M2, M3, M4, M5, M6, M7]
 
@@ -31,6 +31,7 @@ def get_table(model, all_data):
     table = f'''
 \\begin{{table*}}[h]
     \\centering
+    \\resizebox{{1\\textwidth}}{{!}}{{%
     \\begin{{tabular}}{{lccc|ccccccc}}
         \\toprule
         Metric & IoU & Area & Baseline & 
@@ -57,6 +58,7 @@ def get_table(model, all_data):
         & 0.50:0.95 & large & {data[M0][11]} & {data[M1][11]} & {data[M2][11]} & {data[M3][11]} & {data[M4][11]} & {data[M5][11]} & {data[M6][11]} & {data[M7][11]} \\\\
         \\bottomrule
     \\end{{tabular}}%
+    }}
     \\caption{{COCO evaluation results for {model}}}
     \\label{{tab:coco_{model}}}
 \\end{{table*}}
