@@ -1,0 +1,38 @@
+{
+    "dpattack": {
+        "epsilon_0.3_iterations_10": {
+            "num_pixels": 746228,
+            "time": 148.39354968070984
+        },
+        "epsilon_0.3_iterations_20": {
+            "num_pixels": 746228,
+            "time": 303.84987473487854
+        },
+        "epsilon_1.0_iterations_10": {
+            "num_pixels": 746228,
+            "time": 142.34925889968872
+        },
+        "epsilon_1.0_iterations_20": {
+            "num_pixels": 746228,
+            "time": 304.2198886871338
+        }
+    },
+    "edge": {
+        "epsilon_0.3_iterations_10": {
+            "num_pixels": 1492456,
+            "time": 296.7870993614197
+        },
+        "epsilon_0.3_iterations_20": {
+            "num_pixels": 1492456,
+            "time": 607.6997494697571
+        },
+        "epsilon_1.0_iterations_10": {
+            "num_pixels": 1492456,
+            "time": 284.69851779937744
+        },
+        "epsilon_1.0_iterations_20": {
+            "num_pixels": 1492456,
+            "time": 608.4397773742676
+        }
+    }
+}
