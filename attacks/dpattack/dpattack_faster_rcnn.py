@@ -1,3 +1,5 @@
+# Written by: Ankit
+
 import torch
 import torchvision.transforms as transforms
 from torchvision.models.detection import fasterrcnn_resnet50_fpn
