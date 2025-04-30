@@ -6,17 +6,15 @@ from PIL import Image
 from tqdm import tqdm
 import os
 
-def dpattack_faster_rcnn(image_path, epsilon=1, iterations=100, grid_size=10, target_confidence=0.25, confidence_threshold=0.5, nms_threshold=0.3):
+def dpattack_faster_rcnn(image_path, image_id, epsilon=1, iterations=10, grid_size=3, target_confidence=0.25, confidence_threshold=0.5, nms_threshold=0.3):
 
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = fasterrcnn_resnet50_fpn(pretrained=True)
-    model.to(device)
     model.eval()
 
     # Load and preprocess the image
     transform = transforms.Compose([transforms.ToTensor()])
     org_image = Image.open(image_path).convert('RGB')
-    org_tensor = transform(org_image).unsqueeze(0).to(device)  # Shape: [1, 3, H, W]
+    org_tensor = transform(org_image).unsqueeze(0)  # Shape: [1, 3, H, W]
 
     # Forward pass to detect objects
     with torch.no_grad():
@@ -36,8 +34,15 @@ def dpattack_faster_rcnn(image_path, epsilon=1, iterations=100, grid_size=10, ta
         x_min, y_min, x_max, y_max = map(int, box)
         y_len = y_max - y_min
         x_len = x_max - x_min
-        M[:, :, y_min:y_max:y_len//(grid_size+1), x_min:x_max] = 1
-        M[:, :, y_min:y_max, x_min:x_max:x_len//(grid_size+1)] = 1
+        
+        try:
+            M[:, :, y_min:y_max:y_len//(grid_size+1), x_min:x_max] = 1
+            M[:, :, y_min:y_max, x_min:x_max:x_len//(grid_size+1)] = 1
+
+        except:
+            M[:, :, y_min:y_max:y_len//2, x_min:x_max] = 1
+            M[:, :, y_min:y_max, x_min:x_max:x_len//2] = 1
+            
     M.requires_grad = False  # Mask is not trainable
 
     # Create trainable adversarial perturbation δ
@@ -51,6 +56,8 @@ def dpattack_faster_rcnn(image_path, epsilon=1, iterations=100, grid_size=10, ta
 
         # Forward pass through the model
         output = model(patched_tensor)
+        if len(output[0]['boxes']) == 0:
+            break
 
         # Compute loss based on confidences
         loss = 0
