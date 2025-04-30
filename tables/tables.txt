@@ -1,0 +1,1710 @@
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.100 \\
+        & 0.50 & all & 0.159 \\
+        & 0.75 & all & 0.110 \\
+        & 0.50:0.95 & small & 0.006 \\
+        & 0.50:0.95 & medium & 0.029 \\
+        & 0.50:0.95 & large & 0.238 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.089 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.106 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.106 \\
+        & 0.50:0.95 & small & 0.009 \\
+        & 0.50:0.95 & medium & 0.035 \\
+        & 0.50:0.95 & large & 0.244 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for Faster R-CNN on dpattack @ epsilon = 0.3 iters = 20 gridesize = 3}
+    \label{tab:coco_Faster R-CNN_dpattack @ epsilon = 0.3 iters = 20 gridesize = 3}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.032 \\
+        & 0.50 & all & 0.068 \\
+        & 0.75 & all & 0.023 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.003 \\
+        & 0.50:0.95 & large & 0.068 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.030 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.036 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.036 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.002 \\
+        & 0.50:0.95 & large & 0.077 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on dpattack @ epsilon = 0.3 iters = 20 gridesize = 3}
+    \label{tab:coco_YOLOv5_dpattack @ epsilon = 0.3 iters = 20 gridesize = 3}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.106 \\
+        & 0.50 & all & 0.158 \\
+        & 0.75 & all & 0.113 \\
+        & 0.50:0.95 & small & 0.010 \\
+        & 0.50:0.95 & medium & 0.033 \\
+        & 0.50:0.95 & large & 0.235 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.097 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.111 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.111 \\
+        & 0.50:0.95 & small & 0.010 \\
+        & 0.50:0.95 & medium & 0.034 \\
+        & 0.50:0.95 & large & 0.242 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for Faster R-CNN on dpattack @ epsilon = 0.3 iters = 10 gridesize = 3}
+    \label{tab:coco_Faster R-CNN_dpattack @ epsilon = 0.3 iters = 10 gridesize = 3}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.031 \\
+        & 0.50 & all & 0.065 \\
+        & 0.75 & all & 0.024 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.003 \\
+        & 0.50:0.95 & large & 0.059 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.028 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.035 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.035 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.003 \\
+        & 0.50:0.95 & large & 0.068 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on dpattack @ epsilon = 0.3 iters = 10 gridesize = 3}
+    \label{tab:coco_YOLOv5_dpattack @ epsilon = 0.3 iters = 10 gridesize = 3}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.091 \\
+        & 0.50 & all & 0.154 \\
+        & 0.75 & all & 0.095 \\
+        & 0.50:0.95 & small & 0.015 \\
+        & 0.50:0.95 & medium & 0.080 \\
+        & 0.50:0.95 & large & 0.201 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.079 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.098 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.098 \\
+        & 0.50:0.95 & small & 0.015 \\
+        & 0.50:0.95 & medium & 0.083 \\
+        & 0.50:0.95 & large & 0.207 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for Faster R-CNN on dpattack @ epsilon = 1.0 iters = 10 gridesize = 3}
+    \label{tab:coco_Faster R-CNN_dpattack @ epsilon = 1.0 iters = 10 gridesize = 3}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.022 \\
+        & 0.50 & all & 0.048 \\
+        & 0.75 & all & 0.018 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.000 \\
+        & 0.50:0.95 & large & 0.047 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.023 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.025 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.025 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.000 \\
+        & 0.50:0.95 & large & 0.053 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on dpattack @ epsilon = 1.0 iters = 10 gridesize = 3}
+    \label{tab:coco_YOLOv5_dpattack @ epsilon = 1.0 iters = 10 gridesize = 3}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.085 \\
+        & 0.50 & all & 0.151 \\
+        & 0.75 & all & 0.088 \\
+        & 0.50:0.95 & small & 0.010 \\
+        & 0.50:0.95 & medium & 0.042 \\
+        & 0.50:0.95 & large & 0.212 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.086 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.097 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.097 \\
+        & 0.50:0.95 & small & 0.010 \\
+        & 0.50:0.95 & medium & 0.045 \\
+        & 0.50:0.95 & large & 0.231 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for Faster R-CNN on dpattack @ epsilon = 1.0 iters = 20 gridesize = 3}
+    \label{tab:coco_Faster R-CNN_dpattack @ epsilon = 1.0 iters = 20 gridesize = 3}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.030 \\
+        & 0.50 & all & 0.059 \\
+        & 0.75 & all & 0.019 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.002 \\
+        & 0.50:0.95 & large & 0.059 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.028 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.036 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.036 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.002 \\
+        & 0.50:0.95 & large & 0.070 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on dpattack @ epsilon = 1.0 iters = 20 gridesize = 3}
+    \label{tab:coco_YOLOv5_dpattack @ epsilon = 1.0 iters = 20 gridesize = 3}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.018 \\
+        & 0.50 & all & 0.059 \\
+        & 0.75 & all & 0.007 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.014 \\
+        & 0.50:0.95 & large & 0.049 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.032 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.045 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.045 \\
+        & 0.50:0.95 & small & 0.002 \\
+        & 0.50:0.95 & medium & 0.025 \\
+        & 0.50:0.95 & large & 0.103 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on fgsm @ epsilon = 0.05}
+    \label{tab:coco_YOLOv5_fgsm @ epsilon = 0.05}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.175 \\
+        & 0.50 & all & 0.284 \\
+        & 0.75 & all & 0.187 \\
+        & 0.50:0.95 & small & 0.064 \\
+        & 0.50:0.95 & medium & 0.169 \\
+        & 0.50:0.95 & large & 0.275 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.172 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.221 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.221 \\
+        & 0.50:0.95 & small & 0.071 \\
+        & 0.50:0.95 & medium & 0.208 \\
+        & 0.50:0.95 & large & 0.344 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for Faster R-CNN on fgsm @ epsilon = 0.05}
+    \label{tab:coco_Faster R-CNN_fgsm @ epsilon = 0.05}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.010 \\
+        & 0.50 & all & 0.032 \\
+        & 0.75 & all & 0.004 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.007 \\
+        & 0.50:0.95 & large & 0.024 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.020 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.026 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.026 \\
+        & 0.50:0.95 & small & 0.002 \\
+        & 0.50:0.95 & medium & 0.010 \\
+        & 0.50:0.95 & large & 0.058 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on fgsm @ epsilon = 0.05}
+    \label{tab:coco_YOLOv5_fgsm @ epsilon = 0.05}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.018 \\
+        & 0.50 & all & 0.062 \\
+        & 0.75 & all & 0.005 \\
+        & 0.50:0.95 & small & 0.002 \\
+        & 0.50:0.95 & medium & 0.011 \\
+        & 0.50:0.95 & large & 0.051 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.034 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.046 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.046 \\
+        & 0.50:0.95 & small & 0.002 \\
+        & 0.50:0.95 & medium & 0.021 \\
+        & 0.50:0.95 & large & 0.113 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on fgsm @ epsilon = 0.05}
+    \label{tab:coco_YOLOv5_fgsm @ epsilon = 0.05}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.018 \\
+        & 0.50 & all & 0.057 \\
+        & 0.75 & all & 0.007 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.012 \\
+        & 0.50:0.95 & large & 0.045 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.030 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.043 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.043 \\
+        & 0.50:0.95 & small & 0.002 \\
+        & 0.50:0.95 & medium & 0.021 \\
+        & 0.50:0.95 & large & 0.103 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on fgsm @ epsilon = 0.05}
+    \label{tab:coco_YOLOv5_fgsm @ epsilon = 0.05}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.020 \\
+        & 0.50 & all & 0.065 \\
+        & 0.75 & all & 0.007 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.012 \\
+        & 0.50:0.95 & large & 0.055 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.033 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.047 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.047 \\
+        & 0.50:0.95 & small & 0.002 \\
+        & 0.50:0.95 & medium & 0.022 \\
+        & 0.50:0.95 & large & 0.117 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on fgsm @ epsilon = 0.05}
+    \label{tab:coco_YOLOv5_fgsm @ epsilon = 0.05}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.007 \\
+        & 0.50 & all & 0.024 \\
+        & 0.75 & all & 0.002 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.003 \\
+        & 0.50:0.95 & large & 0.016 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.013 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.017 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.017 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.006 \\
+        & 0.50:0.95 & large & 0.035 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on fgsm @ epsilon = 0.05}
+    \label{tab:coco_YOLOv5_fgsm @ epsilon = 0.05}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.009 \\
+        & 0.50 & all & 0.026 \\
+        & 0.75 & all & 0.004 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.006 \\
+        & 0.50:0.95 & large & 0.021 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.015 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.020 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.020 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.009 \\
+        & 0.50:0.95 & large & 0.043 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on fgsm @ epsilon = 0.05}
+    \label{tab:coco_YOLOv5_fgsm @ epsilon = 0.05}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.016 \\
+        & 0.50 & all & 0.051 \\
+        & 0.75 & all & 0.005 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.011 \\
+        & 0.50:0.95 & large & 0.042 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.029 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.039 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.040 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.018 \\
+        & 0.50:0.95 & large & 0.094 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on fgsm @ epsilon = 0.1}
+    \label{tab:coco_YOLOv5_fgsm @ epsilon = 0.1}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.115 \\
+        & 0.50 & all & 0.185 \\
+        & 0.75 & all & 0.124 \\
+        & 0.50:0.95 & small & 0.042 \\
+        & 0.50:0.95 & medium & 0.115 \\
+        & 0.50:0.95 & large & 0.177 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.114 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.145 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.146 \\
+        & 0.50:0.95 & small & 0.046 \\
+        & 0.50:0.95 & medium & 0.140 \\
+        & 0.50:0.95 & large & 0.222 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for Faster R-CNN on fgsm @ epsilon = 0.1}
+    \label{tab:coco_Faster R-CNN_fgsm @ epsilon = 0.1}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.004 \\
+        & 0.50 & all & 0.013 \\
+        & 0.75 & all & 0.003 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.005 \\
+        & 0.50:0.95 & large & 0.009 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.008 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.010 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.010 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.006 \\
+        & 0.50:0.95 & large & 0.019 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on fgsm @ epsilon = 0.1}
+    \label{tab:coco_YOLOv5_fgsm @ epsilon = 0.1}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.018 \\
+        & 0.50 & all & 0.059 \\
+        & 0.75 & all & 0.005 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.011 \\
+        & 0.50:0.95 & large & 0.046 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.032 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.042 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.043 \\
+        & 0.50:0.95 & small & 0.002 \\
+        & 0.50:0.95 & medium & 0.018 \\
+        & 0.50:0.95 & large & 0.104 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on fgsm @ epsilon = 0.1}
+    \label{tab:coco_YOLOv5_fgsm @ epsilon = 0.1}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.016 \\
+        & 0.50 & all & 0.044 \\
+        & 0.75 & all & 0.007 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.012 \\
+        & 0.50:0.95 & large & 0.036 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.023 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.032 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.033 \\
+        & 0.50:0.95 & small & 0.002 \\
+        & 0.50:0.95 & medium & 0.017 \\
+        & 0.50:0.95 & large & 0.074 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on fgsm @ epsilon = 0.1}
+    \label{tab:coco_YOLOv5_fgsm @ epsilon = 0.1}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.020 \\
+        & 0.50 & all & 0.062 \\
+        & 0.75 & all & 0.008 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.013 \\
+        & 0.50:0.95 & large & 0.050 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.030 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.044 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.044 \\
+        & 0.50:0.95 & small & 0.002 \\
+        & 0.50:0.95 & medium & 0.020 \\
+        & 0.50:0.95 & large & 0.107 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on fgsm @ epsilon = 0.1}
+    \label{tab:coco_YOLOv5_fgsm @ epsilon = 0.1}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.004 \\
+        & 0.50 & all & 0.012 \\
+        & 0.75 & all & 0.002 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.003 \\
+        & 0.50:0.95 & large & 0.009 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.005 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.007 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.007 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.004 \\
+        & 0.50:0.95 & large & 0.015 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on fgsm @ epsilon = 0.1}
+    \label{tab:coco_YOLOv5_fgsm @ epsilon = 0.1}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.004 \\
+        & 0.50 & all & 0.013 \\
+        & 0.75 & all & 0.002 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.003 \\
+        & 0.50:0.95 & large & 0.009 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.008 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.009 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.009 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.005 \\
+        & 0.50:0.95 & large & 0.018 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on fgsm @ epsilon = 0.1}
+    \label{tab:coco_YOLOv5_fgsm @ epsilon = 0.1}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.021 \\
+        & 0.50 & all & 0.071 \\
+        & 0.75 & all & 0.006 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.013 \\
+        & 0.50:0.95 & large & 0.057 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.036 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.050 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.050 \\
+        & 0.50:0.95 & small & 0.003 \\
+        & 0.50:0.95 & medium & 0.026 \\
+        & 0.50:0.95 & large & 0.120 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on fgsm @ epsilon = 0.01}
+    \label{tab:coco_YOLOv5_fgsm @ epsilon = 0.01}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.252 \\
+        & 0.50 & all & 0.389 \\
+        & 0.75 & all & 0.279 \\
+        & 0.50:0.95 & small & 0.113 \\
+        & 0.50:0.95 & medium & 0.255 \\
+        & 0.50:0.95 & large & 0.355 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.227 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.299 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.300 \\
+        & 0.50:0.95 & small & 0.122 \\
+        & 0.50:0.95 & medium & 0.296 \\
+        & 0.50:0.95 & large & 0.414 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for Faster R-CNN on fgsm @ epsilon = 0.01}
+    \label{tab:coco_Faster R-CNN_fgsm @ epsilon = 0.01}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.015 \\
+        & 0.50 & all & 0.048 \\
+        & 0.75 & all & 0.006 \\
+        & 0.50:0.95 & small & 0.002 \\
+        & 0.50:0.95 & medium & 0.012 \\
+        & 0.50:0.95 & large & 0.044 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.030 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.042 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.043 \\
+        & 0.50:0.95 & small & 0.002 \\
+        & 0.50:0.95 & medium & 0.021 \\
+        & 0.50:0.95 & large & 0.104 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on fgsm @ epsilon = 0.01}
+    \label{tab:coco_YOLOv5_fgsm @ epsilon = 0.01}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.021 \\
+        & 0.50 & all & 0.068 \\
+        & 0.75 & all & 0.006 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.014 \\
+        & 0.50:0.95 & large & 0.058 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.036 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.050 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.051 \\
+        & 0.50:0.95 & small & 0.002 \\
+        & 0.50:0.95 & medium & 0.027 \\
+        & 0.50:0.95 & large & 0.131 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on fgsm @ epsilon = 0.01}
+    \label{tab:coco_YOLOv5_fgsm @ epsilon = 0.01}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.020 \\
+        & 0.50 & all & 0.069 \\
+        & 0.75 & all & 0.006 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.015 \\
+        & 0.50:0.95 & large & 0.054 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.034 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.050 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.051 \\
+        & 0.50:0.95 & small & 0.003 \\
+        & 0.50:0.95 & medium & 0.030 \\
+        & 0.50:0.95 & large & 0.120 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on fgsm @ epsilon = 0.01}
+    \label{tab:coco_YOLOv5_fgsm @ epsilon = 0.01}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.023 \\
+        & 0.50 & all & 0.075 \\
+        & 0.75 & all & 0.007 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.015 \\
+        & 0.50:0.95 & large & 0.060 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.037 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.053 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.053 \\
+        & 0.50:0.95 & small & 0.002 \\
+        & 0.50:0.95 & medium & 0.028 \\
+        & 0.50:0.95 & large & 0.125 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on fgsm @ epsilon = 0.01}
+    \label{tab:coco_YOLOv5_fgsm @ epsilon = 0.01}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.016 \\
+        & 0.50 & all & 0.049 \\
+        & 0.75 & all & 0.007 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.008 \\
+        & 0.50:0.95 & large & 0.044 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.027 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.038 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.039 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.017 \\
+        & 0.50:0.95 & large & 0.095 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on fgsm @ epsilon = 0.01}
+    \label{tab:coco_YOLOv5_fgsm @ epsilon = 0.01}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.015 \\
+        & 0.50 & all & 0.049 \\
+        & 0.75 & all & 0.005 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.011 \\
+        & 0.50:0.95 & large & 0.039 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.026 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.040 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.040 \\
+        & 0.50:0.95 & small & 0.002 \\
+        & 0.50:0.95 & medium & 0.020 \\
+        & 0.50:0.95 & large & 0.093 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on fgsm @ epsilon = 0.01}
+    \label{tab:coco_YOLOv5_fgsm @ epsilon = 0.01}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.247 \\
+        & 0.50 & all & 0.389 \\
+        & 0.75 & all & 0.252 \\
+        & 0.50:0.95 & small & 0.095 \\
+        & 0.50:0.95 & medium & 0.234 \\
+        & 0.50:0.95 & large & 0.440 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.208 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.280 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.280 \\
+        & 0.50:0.95 & small & 0.106 \\
+        & 0.50:0.95 & medium & 0.254 \\
+        & 0.50:0.95 & large & 0.476 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for Faster R-CNN on Edge Attack @ epsilon = 0.3 iters = 20 gridesize = 3}
+    \label{tab:coco_Faster R-CNN_Edge Attack @ epsilon = 0.3 iters = 20 gridesize = 3}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.044 \\
+        & 0.50 & all & 0.099 \\
+        & 0.75 & all & 0.034 \\
+        & 0.50:0.95 & small & 0.011 \\
+        & 0.50:0.95 & medium & 0.002 \\
+        & 0.50:0.95 & large & 0.083 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.038 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.052 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.052 \\
+        & 0.50:0.95 & small & 0.011 \\
+        & 0.50:0.95 & medium & 0.002 \\
+        & 0.50:0.95 & large & 0.103 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on Edge Attack @ epsilon = 0.3 iters = 20 gridesize = 3}
+    \label{tab:coco_YOLOv5_Edge Attack @ epsilon = 0.3 iters = 20 gridesize = 3}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.249 \\
+        & 0.50 & all & 0.385 \\
+        & 0.75 & all & 0.272 \\
+        & 0.50:0.95 & small & 0.094 \\
+        & 0.50:0.95 & medium & 0.230 \\
+        & 0.50:0.95 & large & 0.425 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.208 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.270 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.270 \\
+        & 0.50:0.95 & small & 0.095 \\
+        & 0.50:0.95 & medium & 0.244 \\
+        & 0.50:0.95 & large & 0.452 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for Faster R-CNN on Edge Attack @ epsilon = 0.3 iters = 10 gridesize = 3}
+    \label{tab:coco_Faster R-CNN_Edge Attack @ epsilon = 0.3 iters = 10 gridesize = 3}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.042 \\
+        & 0.50 & all & 0.096 \\
+        & 0.75 & all & 0.030 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.002 \\
+        & 0.50:0.95 & large & 0.084 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.034 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.051 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.051 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.004 \\
+        & 0.50:0.95 & large & 0.103 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on Edge Attack @ epsilon = 0.3 iters = 10 gridesize = 3}
+    \label{tab:coco_YOLOv5_Edge Attack @ epsilon = 0.3 iters = 10 gridesize = 3}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.260 \\
+        & 0.50 & all & 0.401 \\
+        & 0.75 & all & 0.284 \\
+        & 0.50:0.95 & small & 0.106 \\
+        & 0.50:0.95 & medium & 0.262 \\
+        & 0.50:0.95 & large & 0.449 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.216 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.291 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.291 \\
+        & 0.50:0.95 & small & 0.117 \\
+        & 0.50:0.95 & medium & 0.287 \\
+        & 0.50:0.95 & large & 0.477 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for Faster R-CNN on Edge Attack @ epsilon = 1.0 iters = 20 gridesize = 3}
+    \label{tab:coco_Faster R-CNN_Edge Attack @ epsilon = 1.0 iters = 20 gridesize = 3}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.037 \\
+        & 0.50 & all & 0.086 \\
+        & 0.75 & all & 0.030 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.002 \\
+        & 0.50:0.95 & large & 0.079 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.031 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.046 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.046 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.002 \\
+        & 0.50:0.95 & large & 0.100 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on Edge Attack @ epsilon = 1.0 iters = 20 gridesize = 3}
+    \label{tab:coco_YOLOv5_Edge Attack @ epsilon = 1.0 iters = 20 gridesize = 3}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.273 \\
+        & 0.50 & all & 0.413 \\
+        & 0.75 & all & 0.293 \\
+        & 0.50:0.95 & small & 0.115 \\
+        & 0.50:0.95 & medium & 0.252 \\
+        & 0.50:0.95 & large & 0.486 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.228 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.313 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.313 \\
+        & 0.50:0.95 & small & 0.123 \\
+        & 0.50:0.95 & medium & 0.278 \\
+        & 0.50:0.95 & large & 0.516 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for Faster R-CNN on Edge Attack @ epsilon = 1.0 iters = 10 gridesize = 3}
+    \label{tab:coco_Faster R-CNN_Edge Attack @ epsilon = 1.0 iters = 10 gridesize = 3}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.040 \\
+        & 0.50 & all & 0.095 \\
+        & 0.75 & all & 0.030 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.002 \\
+        & 0.50:0.95 & large & 0.083 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.033 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.049 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.049 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.003 \\
+        & 0.50:0.95 & large & 0.102 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on Edge Attack @ epsilon = 1.0 iters = 10 gridesize = 3}
+    \label{tab:coco_YOLOv5_Edge Attack @ epsilon = 1.0 iters = 10 gridesize = 3}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.506 \\
+        & 0.50 & all & 0.645 \\
+        & 0.75 & all & 0.545 \\
+        & 0.50:0.95 & small & 0.284 \\
+        & 0.50:0.95 & medium & 0.559 \\
+        & 0.50:0.95 & large & 0.663 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.389 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.568 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.572 \\
+        & 0.50:0.95 & small & 0.323 \\
+        & 0.50:0.95 & medium & 0.613 \\
+        & 0.50:0.95 & large & 0.734 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on baseline}
+    \label{tab:coco_YOLOv5_baseline}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.373 \\
+        & 0.50 & all & 0.564 \\
+        & 0.75 & all & 0.413 \\
+        & 0.50:0.95 & small & 0.198 \\
+        & 0.50:0.95 & medium & 0.398 \\
+        & 0.50:0.95 & large & 0.472 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.303 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.438 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.445 \\
+        & 0.50:0.95 & small & 0.228 \\
+        & 0.50:0.95 & medium & 0.466 \\
+        & 0.50:0.95 & large & 0.563 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for Faster R-CNN on baseline}
+    \label{tab:coco_Faster R-CNN_baseline}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.426 \\
+        & 0.50 & all & 0.557 \\
+        & 0.75 & all & 0.462 \\
+        & 0.50:0.95 & small & 0.214 \\
+        & 0.50:0.95 & medium & 0.469 \\
+        & 0.50:0.95 & large & 0.577 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.331 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.480 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.484 \\
+        & 0.50:0.95 & small & 0.233 \\
+        & 0.50:0.95 & medium & 0.523 \\
+        & 0.50:0.95 & large & 0.657 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on baseline}
+    \label{tab:coco_YOLOv5_baseline}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.511 \\
+        & 0.50 & all & 0.645 \\
+        & 0.75 & all & 0.560 \\
+        & 0.50:0.95 & small & 0.306 \\
+        & 0.50:0.95 & medium & 0.582 \\
+        & 0.50:0.95 & large & 0.661 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.385 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.566 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.573 \\
+        & 0.50:0.95 & small & 0.338 \\
+        & 0.50:0.95 & medium & 0.627 \\
+        & 0.50:0.95 & large & 0.731 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on baseline}
+    \label{tab:coco_YOLOv5_baseline}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.476 \\
+        & 0.50 & all & 0.609 \\
+        & 0.75 & all & 0.516 \\
+        & 0.50:0.95 & small & 0.265 \\
+        & 0.50:0.95 & medium & 0.516 \\
+        & 0.50:0.95 & large & 0.636 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.362 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.527 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.532 \\
+        & 0.50:0.95 & small & 0.285 \\
+        & 0.50:0.95 & medium & 0.567 \\
+        & 0.50:0.95 & large & 0.708 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on baseline}
+    \label{tab:coco_YOLOv5_baseline}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.510 \\
+        & 0.50 & all & 0.644 \\
+        & 0.75 & all & 0.550 \\
+        & 0.50:0.95 & small & 0.296 \\
+        & 0.50:0.95 & medium & 0.564 \\
+        & 0.50:0.95 & large & 0.656 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.381 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.562 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.566 \\
+        & 0.50:0.95 & small & 0.318 \\
+        & 0.50:0.95 & medium & 0.612 \\
+        & 0.50:0.95 & large & 0.719 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on baseline}
+    \label{tab:coco_YOLOv5_baseline}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.352 \\
+        & 0.50 & all & 0.467 \\
+        & 0.75 & all & 0.386 \\
+        & 0.50:0.95 & small & 0.110 \\
+        & 0.50:0.95 & medium & 0.389 \\
+        & 0.50:0.95 & large & 0.533 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.282 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.399 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.401 \\
+        & 0.50:0.95 & small & 0.118 \\
+        & 0.50:0.95 & medium & 0.436 \\
+        & 0.50:0.95 & large & 0.602 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on baseline}
+    \label{tab:coco_YOLOv5_baseline}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.392 \\
+        & 0.50 & all & 0.518 \\
+        & 0.75 & all & 0.428 \\
+        & 0.50:0.95 & small & 0.174 \\
+        & 0.50:0.95 & medium & 0.441 \\
+        & 0.50:0.95 & large & 0.530 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.311 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.441 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.444 \\
+        & 0.50:0.95 & small & 0.187 \\
+        & 0.50:0.95 & medium & 0.490 \\
+        & 0.50:0.95 & large & 0.597 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on baseline}
+    \label{tab:coco_YOLOv5_baseline}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.307 \\
+        & 0.50 & all & 0.496 \\
+        & 0.75 & all & 0.331 \\
+        & 0.50:0.95 & small & 0.268 \\
+        & 0.50:0.95 & medium & 0.303 \\
+        & 0.50:0.95 & large & 0.469 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.272 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.397 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.404 \\
+        & 0.50:0.95 & small & 0.315 \\
+        & 0.50:0.95 & medium & 0.390 \\
+        & 0.50:0.95 & large & 0.543 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for Faster R-CNN on PGD Attack @ epsilon = 0.031 $\alpha =$ 0.007843 iters = 20}
+    \label{tab:coco_Faster R-CNN_PGD Attack @ epsilon = 0.031 $\alpha =$ 0.007843 iters = 20}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.014 \\
+        & 0.50 & all & 0.043 \\
+        & 0.75 & all & 0.005 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.010 \\
+        & 0.50:0.95 & large & 0.038 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.026 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.037 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.038 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.019 \\
+        & 0.50:0.95 & large & 0.089 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on PGD Attack @ epsilon = 0.031 $\alpha =$ 0.007843 iters = 20}
+    \label{tab:coco_YOLOv5_PGD Attack @ epsilon = 0.031 $\alpha =$ 0.007843 iters = 20}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.331 \\
+        & 0.50 & all & 0.526 \\
+        & 0.75 & all & 0.336 \\
+        & 0.50:0.95 & small & 0.272 \\
+        & 0.50:0.95 & medium & 0.361 \\
+        & 0.50:0.95 & large & 0.444 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.293 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.432 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.437 \\
+        & 0.50:0.95 & small & 0.318 \\
+        & 0.50:0.95 & medium & 0.472 \\
+        & 0.50:0.95 & large & 0.536 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for Faster R-CNN on PGD Attack @ epsilon = 0.031 $\alpha =$ 0.007843 iters = 10}
+    \label{tab:coco_Faster R-CNN_PGD Attack @ epsilon = 0.031 $\alpha =$ 0.007843 iters = 10}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.014 \\
+        & 0.50 & all & 0.047 \\
+        & 0.75 & all & 0.005 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.009 \\
+        & 0.50:0.95 & large & 0.037 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.026 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.038 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.038 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.017 \\
+        & 0.50:0.95 & large & 0.089 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on PGD Attack @ epsilon = 0.031 $\alpha =$ 0.007843 iters = 10}
+    \label{tab:coco_YOLOv5_PGD Attack @ epsilon = 0.031 $\alpha =$ 0.007843 iters = 10}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.180 \\
+        & 0.50 & all & 0.317 \\
+        & 0.75 & all & 0.184 \\
+        & 0.50:0.95 & small & 0.132 \\
+        & 0.50:0.95 & medium & 0.210 \\
+        & 0.50:0.95 & large & 0.219 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.186 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.309 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.322 \\
+        & 0.50:0.95 & small & 0.210 \\
+        & 0.50:0.95 & medium & 0.360 \\
+        & 0.50:0.95 & large & 0.342 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for Faster R-CNN on PGD Attack @ epsilon = 0.062 $\alpha =$ 0.015686 iters = 10}
+    \label{tab:coco_Faster R-CNN_PGD Attack @ epsilon = 0.062 $\alpha =$ 0.015686 iters = 10}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.010 \\
+        & 0.50 & all & 0.030 \\
+        & 0.75 & all & 0.004 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.006 \\
+        & 0.50:0.95 & large & 0.022 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.018 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.026 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.026 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.009 \\
+        & 0.50:0.95 & large & 0.059 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on PGD Attack @ epsilon = 0.062 $\alpha =$ 0.015686 iters = 10}
+    \label{tab:coco_YOLOv5_PGD Attack @ epsilon = 0.062 $\alpha =$ 0.015686 iters = 10}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.147 \\
+        & 0.50 & all & 0.260 \\
+        & 0.75 & all & 0.153 \\
+        & 0.50:0.95 & small & 0.120 \\
+        & 0.50:0.95 & medium & 0.164 \\
+        & 0.50:0.95 & large & 0.195 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.162 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.277 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.291 \\
+        & 0.50:0.95 & small & 0.209 \\
+        & 0.50:0.95 & medium & 0.318 \\
+        & 0.50:0.95 & large & 0.320 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for Faster R-CNN on PGD Attack @ epsilon = 0.062 $\alpha =$ 0.015686 iters = 20}
+    \label{tab:coco_Faster R-CNN_PGD Attack @ epsilon = 0.062 $\alpha =$ 0.015686 iters = 20}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.009 \\
+        & 0.50 & all & 0.028 \\
+        & 0.75 & all & 0.004 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.004 \\
+        & 0.50:0.95 & large & 0.022 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.017 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.022 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.022 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.009 \\
+        & 0.50:0.95 & large & 0.051 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on PGD Attack @ epsilon = 0.062 $\alpha =$ 0.015686 iters = 20}
+    \label{tab:coco_YOLOv5_PGD Attack @ epsilon = 0.062 $\alpha =$ 0.015686 iters = 20}
+\end{table}
+
+    
+\begin{table*}[h]
+    \centering
+    \resizebox{1\textwidth}{!}{%
+    \begin{tabular}{lccc|ccccccccccc}
+        \toprule
+        Metric & IoU & Area & Baseline & 
+        \makecell{dpattack \\ $\epsilon=0.3$, iters=20, \\ grid=3} & 
+        \makecell{dpattack \\ $\epsilon=0.3$, iters=10, \\ grid=3} & 
+        \makecell{dpattack \\ $\epsilon=1.0$, iters=10, \\ grid=3} & 
+        \makecell{dpattack \\ $\epsilon=1.0$, iters=20, \\ grid=3} & 
+        \makecell{fgsm \\ $\epsilon=0.05$} & 
+        \makecell{fgsm \\ $\epsilon=0.1$} & 
+        \makecell{fgsm \\ $\epsilon=0.01$} &
+        \makecell{edge attack \\ $\epsilon=0.3$, iters=20, \\ grid=3} & 
+        \makecell{edge attack \\ $\epsilon=0.3$, iters=10, \\ grid=3} & 
+        \makecell{edge attack \\ $\epsilon=1.0$, iters=20, \\ grid=3} & 
+        \makecell{edge attack \\ $\epsilon=1.0$, iters=10, \\ grid=3} &
+        \makecell{pgdattack \\ $\epsilon=0.31$, \\ alpha=0.007843, \\ iters=10} &
+        \makecell{pgdattack \\ $\epsilon=0.31$, \\ alpha=0.007843, \\ iters=20} &
+        \makecell{pgdattack \\ $\epsilon=0.62$, \\ alpha=0.015686, \\ iters=10} &
+        \makecell{pgdattack \\ $\epsilon=0.62$, \\ alpha=0.015686, \\ iters=20} \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.392 & 0.032 & 0.031 & 0.022 & 0.030 & 0.015 & 0.009 & 0.004 & 0.044 & 0.042 & 0.037 & 0.040 & 0.014 & 0.014 & 0.010 & 0.009 \\
+        & 0.50 & all & 0.518 & 0.068 & 0.065 & 0.048 & 0.059 & 0.049 & 0.026 & 0.013 & 0.099 & 0.096 & 0.086 & 0.095 & 0.047 & 0.043 & 0.030 & 0.028 \\
+        & 0.75 & all & 0.428 & 0.023 & 0.024 & 0.018 & 0.019 & 0.005 & 0.004 & 0.002 & 0.034 & 0.030 & 0.030 & 0.030 & 0.005 & 0.005 & 0.004 & 0.004 \\
+        & 0.50:0.95 & small & 0.174 & 0.000 & 0.000 & 0.000 & 0.000 & 0.001 & 0.000 & 0.000 & 0.011 & 0.000 & 0.000 & 0.000 & 0.001 & 0.001 & 0.001 & 0.000 \\
+        & 0.50:0.95 & medium & 0.441 & 0.003 & 0.003 & 0.000 & 0.002 & 0.011 & 0.006 & 0.003 & 0.002 & 0.002 & 0.002 & 0.002 & 0.009 & 0.010 & 0.006 & 0.004 \\
+        & 0.50:0.95 & large & 0.530 & 0.068 & 0.059 & 0.047 & 0.059 & 0.039 & 0.021 & 0.009 & 0.083 & 0.084 & 0.079 & 0.083 & 0.037 & 0.038 & 0.022 & 0.022 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.311 & 0.030 & 0.028 & 0.023 & 0.028 & 0.026 & 0.015 & 0.008 & 0.038 & 0.034 & 0.031 & 0.033 & 0.026 & 0.026 & 0.018 & 0.017 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.441 & 0.036 & 0.035 & 0.025 & 0.036 & 0.040 & 0.020 & 0.009 & 0.052 & 0.051 & 0.046 & 0.049 & 0.038 & 0.037 & 0.026 & 0.022 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.444 & 0.036 & 0.035 & 0.025 & 0.036 & 0.040 & 0.020 & 0.009 & 0.052 & 0.051 & 0.046 & 0.049 & 0.038 & 0.038 & 0.026 & 0.022 \\
+        & 0.50:0.95 & small & 0.187 & 0.000 & 0.000 & 0.000 & 0.000 & 0.002 & 0.001 & 0.000 & 0.011 & 0.000 & 0.000 & 0.000 & 0.001 & 0.001 & 0.001 & 0.000 \\
+        & 0.50:0.95 & medium & 0.490 & 0.002 & 0.003 & 0.000 & 0.002 & 0.020 & 0.009 & 0.005 & 0.002 & 0.004 & 0.002 & 0.003 & 0.017 & 0.019 & 0.009 & 0.009 \\
+        & 0.50:0.95 & large & 0.597 & 0.077 & 0.068 & 0.053 & 0.070 & 0.093 & 0.043 & 0.018 & 0.103 & 0.103 & 0.100 & 0.102 & 0.089 & 0.089 & 0.059 & 0.051 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for yolov5s}
+    \label{tab:coco_yolov5s}
+\end{table*}
+
+
+
+\begin{table*}[h]
+    \centering
+    \resizebox{1\textwidth}{!}{%
+    \begin{tabular}{lccc|ccccccccccc}
+        \toprule
+        Metric & IoU & Area & Baseline & 
+        \makecell{dpattack \\ $\epsilon=0.3$, iters=20, \\ grid=3} & 
+        \makecell{dpattack \\ $\epsilon=0.3$, iters=10, \\ grid=3} & 
+        \makecell{dpattack \\ $\epsilon=1.0$, iters=10, \\ grid=3} & 
+        \makecell{dpattack \\ $\epsilon=1.0$, iters=20, \\ grid=3} & 
+        \makecell{fgsm \\ $\epsilon=0.05$} & 
+        \makecell{fgsm \\ $\epsilon=0.1$} & 
+        \makecell{fgsm \\ $\epsilon=0.01$} &
+        \makecell{edge attack \\ $\epsilon=0.3$, iters=20, \\ grid=3} & 
+        \makecell{edge attack \\ $\epsilon=0.3$, iters=10, \\ grid=3} & 
+        \makecell{edge attack \\ $\epsilon=1.0$, iters=20, \\ grid=3} & 
+        \makecell{edge attack \\ $\epsilon=1.0$, iters=10, \\ grid=3} &
+        \makecell{pgdattack \\ $\epsilon=0.31$, \\ alpha=0.007843, \\ iters=10} &
+        \makecell{pgdattack \\ $\epsilon=0.31$, \\ alpha=0.007843, \\ iters=20} &
+        \makecell{pgdattack \\ $\epsilon=0.62$, \\ alpha=0.015686, \\ iters=10} &
+        \makecell{pgdattack \\ $\epsilon=0.62$, \\ alpha=0.015686, \\ iters=20} \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.373 & 0.100 & 0.106 & 0.091 & 0.085 & 0.252 & 0.175 & 0.115 & 0.247 & 0.249 & 0.260 & 0.273 & 0.331 & 0.307 & 0.180 & 0.147 \\
+        & 0.50 & all & 0.564 & 0.159 & 0.158 & 0.154 & 0.151 & 0.389 & 0.284 & 0.185 & 0.389 & 0.385 & 0.401 & 0.413 & 0.526 & 0.496 & 0.317 & 0.260 \\
+        & 0.75 & all & 0.413 & 0.110 & 0.113 & 0.095 & 0.088 & 0.279 & 0.187 & 0.124 & 0.252 & 0.272 & 0.284 & 0.293 & 0.336 & 0.331 & 0.184 & 0.153 \\
+        & 0.50:0.95 & small & 0.198 & 0.006 & 0.010 & 0.015 & 0.010 & 0.113 & 0.064 & 0.042 & 0.095 & 0.094 & 0.106 & 0.115 & 0.272 & 0.268 & 0.132 & 0.120 \\
+        & 0.50:0.95 & medium & 0.398 & 0.029 & 0.033 & 0.080 & 0.042 & 0.255 & 0.169 & 0.115 & 0.234 & 0.230 & 0.262 & 0.252 & 0.361 & 0.303 & 0.210 & 0.164 \\
+        & 0.50:0.95 & large & 0.472 & 0.238 & 0.235 & 0.201 & 0.212 & 0.355 & 0.275 & 0.177 & 0.440 & 0.425 & 0.449 & 0.486 & 0.444 & 0.469 & 0.219 & 0.195 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.303 & 0.089 & 0.097 & 0.079 & 0.086 & 0.227 & 0.172 & 0.114 & 0.208 & 0.208 & 0.216 & 0.228 & 0.293 & 0.272 & 0.186 & 0.162 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.438 & 0.106 & 0.111 & 0.098 & 0.097 & 0.299 & 0.221 & 0.145 & 0.280 & 0.270 & 0.291 & 0.313 & 0.432 & 0.397 & 0.309 & 0.277 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.445 & 0.106 & 0.111 & 0.098 & 0.097 & 0.300 & 0.221 & 0.146 & 0.280 & 0.270 & 0.291 & 0.313 & 0.437 & 0.404 & 0.322 & 0.291 \\
+        & 0.50:0.95 & small & 0.228 & 0.009 & 0.010 & 0.015 & 0.010 & 0.122 & 0.071 & 0.046 & 0.106 & 0.095 & 0.117 & 0.123 & 0.318 & 0.315 & 0.210 & 0.209 \\
+        & 0.50:0.95 & medium & 0.466 & 0.035 & 0.034 & 0.083 & 0.045 & 0.296 & 0.208 & 0.140 & 0.254 & 0.244 & 0.287 & 0.278 & 0.472 & 0.390 & 0.360 & 0.318 \\
+        & 0.50:0.95 & large & 0.563 & 0.244 & 0.242 & 0.207 & 0.231 & 0.414 & 0.344 & 0.222 & 0.476 & 0.452 & 0.477 & 0.516 & 0.536 & 0.543 & 0.342 & 0.320 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for faster_rcnn}
+    \label{tab:coco_faster_rcnn}
+\end{table*}
+
