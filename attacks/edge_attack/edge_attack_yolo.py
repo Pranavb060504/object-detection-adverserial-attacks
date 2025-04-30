@@ -40,7 +40,7 @@ def edge_attack_yolo(image_path, epsilon=1, iterations=10, grid_size=3, target_c
     cv2_image = cv2.resize(cv2_image, (640, 640))
     blurred = cv2.GaussianBlur(cv2_image, (5, 5), 1)
     edges = cv2.Canny(blurred, threshold1=200, threshold2=250)
-    binary_edge_mask = torch.tensor((edges > 0).astype(np.uint8)).repeat(3, 1, 1).unsqueeze(0)
+    binary_edge_mask = torch.tensor((edges > 0).astype(np.uint8)).repeat(3, 1, 1).unsqueeze(0).to(device)
 
     # Create binary mask M (grid-based within bounding boxes)
     M = torch.zeros_like(org_tensor)  # Initialize M as zero (no perturbation)
