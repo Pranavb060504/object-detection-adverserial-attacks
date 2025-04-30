@@ -147,9 +147,6 @@ def dpattack_faster_rcnn(image_path, image_id, epsilon=1, iterations=10, grid_si
     # Create trainable adversarial perturbation δ
     delta = torch.zeros_like(org_tensor, requires_grad=True)
 
-    # Optimizer for updating δ
-    losses = []
-
     # Adversarial training loop
     for _ in tqdm(range(iterations)):
         

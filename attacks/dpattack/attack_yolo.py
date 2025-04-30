@@ -9,7 +9,7 @@ from tqdm import tqdm
 import pickle
 
 # Load the pretrained YOLO11 model
-model = YOLO('yolo11x.pt')
+model = YOLO('yolov5s.pt')
 # model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True, autoshape=False)
 model.eval()
 
@@ -90,9 +90,9 @@ for _ in tqdm(range(ITERATIONS)):
 # Apply the final optimized patch to the image
 adv_image_tensor = org_tensor * (1 - M) + delta * M
 adv_image = transforms.ToPILImage()(adv_image_tensor.squeeze(0))
-adv_image.save(f'yolo11x_adv_image_{image_id}.jpg')
+adv_image.save(f'yolo_adv_image_{image_id}.jpg')
 
-with open('yolo11x_losses.pkl', 'wb') as f:
+with open('yolo_losses.pkl', 'wb') as f:
     pickle.dump(losses, f)
 
 plt.plot(losses)
