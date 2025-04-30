@@ -1,7 +1,5 @@
 import os
 
-# open all files in ./results/fgsm/epsilon_0.1
-
 def get_files(path):
     """
     Get all files in a directory
@@ -12,7 +10,7 @@ def get_files(path):
             files.append(os.path.join(root, filename))
     return files
 
-files = get_files('./results/fgsm')
+files = get_files('./results/pgdattack/')
 
 def get_table(x, model, attack):
     table = f'''
@@ -48,6 +46,12 @@ def get_table(x, model, attack):
 
 for file in files:
     model_name = file.split('_results_')[1].split('.')[0]
+
+    if model_name == 'faster_rcnn':
+        model_name = 'Faster R-CNN'
+    else:
+        model_name = 'YOLOv5'
+
     folder_parts = file.split('/')
     
     if folder_parts[2] == 'dpattack':
@@ -55,13 +59,13 @@ for file in files:
     elif folder_parts[2] == 'fgsm':
         attack_name = folder_parts[2] + ' @ epsilon = ' + folder_parts[3].split('_')[1]
     elif folder_parts[2] == 'edge_attack':
-        attack_name = folder_parts[2] + ' @ epsilon = ' + folder_parts[3].split('_')[1] + ' iters = ' + folder_parts[3].split('_')[3] + ' gridesize = ' + folder_parts[3].split('_')[-1]
+        attack_name = 'Edge Attack' + ' @ epsilon = ' + folder_parts[3].split('_')[1] + ' iters = ' + folder_parts[3].split('_')[3] + ' gridesize = ' + folder_parts[3].split('_')[-1]
     elif folder_parts[2] == 'baseline':
         attack_name = folder_parts[2]
+    elif folder_parts[2] == 'pgdattack':
+        attack_name = 'PGD Attack' + ' @ epsilon = ' + folder_parts[3].split('_')[1] + ' \alpha = ' + folder_parts[3].split('_')[3] + ' iters = ' + folder_parts[3].split('_')[5]
     else:
         attack_name = "Unknown Attack"
-
-    # print(model_name, attack_name)
 
     with open(file, 'r') as f:
         lines = f.readlines()

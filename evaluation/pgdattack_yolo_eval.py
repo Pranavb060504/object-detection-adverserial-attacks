@@ -85,84 +85,28 @@ yolo_classes = {
     75: "vase", 76: "scissors", 77: "teddy bear", 78: "hair drier", 79: "toothbrush"
 }
 
-device = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
-# Load a pre-trained YOLOv5 model
-model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True, autoshape=False).train()
-
-import torch
-import torchvision.transforms.functional as F
-from PIL import Image
-import os
-from torchvision.ops import box_iou
-
-def pgd_attack(model, image_path, image_id, eps=8/255, alpha=2/255, steps=10, device='cuda', name='yolov5s'):
-    """
-    Perform PGD attack on the image using the YOLOv5 model, minimizing detection confidence near target box.
-    """
-
-    model.eval()  # Inference mode for Ultralytics YOLOv5
-
-    # Load and preprocess image
-    img = Image.open(image_path).convert("RGB")
-    x = F.to_tensor(img).unsqueeze(0).to(device)
-
-    _, H, W = x.shape[1:]
-
-    # Target box and label (can be modified)
-    target_box = torch.tensor([[0., 0., float(W), float(H)]], device=device)  # Full image
-    target_label = torch.tensor([1], device=device)
-
-    # Initialize adversarial image
-    x_adv = x.detach() + torch.empty_like(x).uniform_(-eps, eps)
-    x_adv = torch.clamp(x_adv, 0, 1).detach().requires_grad_(True)
-
-    for _ in range(steps):
-        if x_adv.grad is not None:
-            x_adv.grad.zero_()
-
-        preds = model(x_adv)[0]  # YOLOv5 returns list of predictions per image
-        loss = torch.tensor(0.0, device=device)
-
-        if preds.shape[0] > 0:
-            pred_boxes = preds[:, :4]   # [x1, y1, x2, y2]
-            confidences = preds[:, 4]   # objectness scores
-
-            # Compute IoU of each predicted box with target box
-            ious = box_iou(pred_boxes, target_box)[:, 0]  # [N]
-            loss = (confidences * ious).sum()  # weighted sum
-
-        # Minimize detection confidence near target
-        loss = -loss
-
-        loss.backward()
-
-        with torch.no_grad():
-            x_adv += alpha * x_adv.grad.sign()
-            x_adv = torch.max(torch.min(x_adv, x + eps), x - eps)
-            x_adv = torch.clamp(x_adv, 0, 1)
-            x_adv.requires_grad_(True)
-
-    # Save adversarial image
-    x_adv_np = x_adv.squeeze(0).permute(1, 2, 0).cpu().numpy()
-    x_adv_np = (x_adv_np * 255).astype("uint8")
-
-    save_dir = f"pgdattack_images/{name}/epsilon_{eps}_alpha_{alpha}_iterations_{steps}"
-    os.makedirs(save_dir, exist_ok=True)
-    Image.fromarray(x_adv_np).save(f"{save_dir}/adv_image_{image_id}.jpg")
-
-
-# Load the YOLO model
-# Use the provided model name
-name = 'yolov5s'
+name = args.model_name
 model_inf = YOLO(f'{name}.pt')  # Use the YOLO model
 model_inf.model.eval()  # Set the model in evaluation mode
 
+model_train = YOLO(f'{name}.pt')  # Use the YOLO model for training
+model_train.model.train()  # Set the model in training mode
+
+# Set device
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+model_train.model.to(device)
 model_inf.model.to(device)
 
 transform = transforms.Compose([
     transforms.Resize((640, 640)),  # Resize to YOLO input size
     transforms.ToTensor()
 ])
+
+import torch
+import torchvision.transforms.functional as F
+from PIL import Image
+import os
+from torchvision.ops import box_iou
 
 os.makedirs(f'pgdattack_images/{name}/epsilon_{epsilon}_alpha_{alpha}_iterations_{steps}/', exist_ok=True)
 
@@ -191,7 +135,7 @@ for sample in dataset:
             if x_adv.grad is not None:
                 x_adv.grad.zero_()
 
-            losses = model(x_adv, targets)
+            losses = model_train(x_adv)
             loss = losses.values()[..., 4].max() 
             
             loss.backward()

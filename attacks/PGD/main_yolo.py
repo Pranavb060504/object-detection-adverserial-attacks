@@ -2,6 +2,7 @@ import torch
 from torchvision.models.detection import fasterrcnn_resnet50_fpn
 from torchvision.transforms import functional as F
 from torchvision.utils import save_image
+import torchvision.transforms as transforms
 from PIL import Image
 from ultralytics import YOLO
 
@@ -9,26 +10,32 @@ eps   = 8/255
 alpha = 2/255 
 steps = 10   
 
-device = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
-# Install ultralytics if not already installed: pip install ultralytics
+# device = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
+model_train = YOLO(f'yolov5s.pt')  # Use the YOLO model for training
+model_train.model.train()  # Set the model in training mode
 
-# Load a pre-trained YOLOv5 model
-model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True, autoshape=False).train()
-
-# Note: You may need to modify the attack code to work with YOLO's interface
+# Set device
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+model_train.model.to(device)
 
 image_path = "../../../../../../"
 image_name = "ferrari.png"
 image_file = image_path + image_name
 
+transform = transforms.Compose([
+    transforms.Resize((640, 640)),  # Resize to YOLO input size
+    transforms.ToTensor()
+])
+
 img = Image.open(image_file).convert("RGB")
-x = F.to_tensor(img).unsqueeze(0).to(device) 
+img = transform(img).unsqueeze(0).to(device)  # Add batch dimension
+x = img.requires_grad_()  # Enable gradients
 
 _, H, W = x.shape[1:]
-targets = [{
-    "boxes": torch.tensor([[0., 0., W, H]], device=device),
-    "labels": torch.tensor([1],   device=device)
-}]
+# targets = [{
+#     "boxes": torch.tensor([[0., 0., W, H]], device=device),
+#     "labels": torch.tensor([1],   device=device)
+# }]
 
 x_adv = x.detach() + torch.empty_like(x).uniform_(-eps, eps)
 x_adv = torch.clamp(x_adv, 0, 1).detach().requires_grad_(True)
@@ -38,8 +45,13 @@ for i in range(steps):
     if x_adv.grad is not None:
         x_adv.grad.zero_()
 
-    losses = model(x_adv, targets)
-    loss = losses.values()[..., 4].max() 
+    losses = model_train.model(x_adv)
+
+    if isinstance(losses, (list, tuple)):
+        losses = losses[0]
+
+    losses = losses.requires_grad_()
+    loss = losses[..., 4].max() 
     
     loss.backward()
     
@@ -55,12 +67,12 @@ for i in range(steps):
 # x_adv = (x_adv * 255).astype("uint8")
 # Image.fromarray(x_adv).save("adv.png")
 
-model.eval()
+model_train.eval()
 with torch.no_grad():
-    pred_clean = model(x)[0]
-    pred_adv   = model(x_adv)[0]
+    pred_clean = model_train(x)[0]
+    pred_adv   = model_train(x_adv)[0]
 
-print(f"Clean boxes: {len(pred_clean['boxes'])}, Adv boxes: {len(pred_adv['boxes'])}")
+# print(f"Clean boxes: {len(pred_clean['boxes'])}, Adv boxes: {len(pred_adv['boxes'])}")
 
 try:
     save_image(x_adv.detach().cpu(), f"adv_image_{image_name}")
