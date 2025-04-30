@@ -46,7 +46,7 @@ def get_table(x, model, attack):
     return table
 
 for attack in attacks:
-    files = get_files(f'./results/{attack}/')
+    files = get_files(f'../results/{attack}/')
     for file in files:
         model_name = file.split('_results_')[1].split('.')[0]
 
