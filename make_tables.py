@@ -10,7 +10,8 @@ def get_files(path):
             files.append(os.path.join(root, filename))
     return files
 
-files = get_files('./results/pgdattack/')
+attacks = ['dpattack', 'fgsm', 'edge_attack', 'baseline', 'pgdattack']
+
 
 def get_table(x, model, attack):
     table = f'''
@@ -44,34 +45,36 @@ def get_table(x, model, attack):
     '''
     return table
 
-for file in files:
-    model_name = file.split('_results_')[1].split('.')[0]
+for attack in attacks:
+    files = get_files(f'./results/{attack}/')
+    for file in files:
+        model_name = file.split('_results_')[1].split('.')[0]
 
-    if model_name == 'faster_rcnn':
-        model_name = 'Faster R-CNN'
-    else:
-        model_name = 'YOLOv5'
+        if model_name == 'faster_rcnn':
+            model_name = 'Faster R-CNN'
+        else:
+            model_name = 'YOLOv5'
 
-    folder_parts = file.split('/')
-    
-    if folder_parts[2] == 'dpattack':
-        attack_name = folder_parts[2] + ' @ epsilon = ' + folder_parts[3].split('_')[1] + ' iters = ' + folder_parts[3].split('_')[3] + ' gridesize = ' + folder_parts[3].split('_')[-1]
-    elif folder_parts[2] == 'fgsm':
-        attack_name = folder_parts[2] + ' @ epsilon = ' + folder_parts[3].split('_')[1]
-    elif folder_parts[2] == 'edge_attack':
-        attack_name = 'Edge Attack' + ' @ epsilon = ' + folder_parts[3].split('_')[1] + ' iters = ' + folder_parts[3].split('_')[3] + ' gridesize = ' + folder_parts[3].split('_')[-1]
-    elif folder_parts[2] == 'baseline':
-        attack_name = folder_parts[2]
-    elif folder_parts[2] == 'pgdattack':
-        attack_name = 'PGD Attack' + ' @ epsilon = ' + folder_parts[3].split('_')[1] + ' \alpha = ' + folder_parts[3].split('_')[3] + ' iters = ' + folder_parts[3].split('_')[5]
-    else:
-        attack_name = "Unknown Attack"
+        folder_parts = file.split('/')
+        
+        if folder_parts[2] == 'dpattack':
+            attack_name = folder_parts[2] + ' @ epsilon = ' + folder_parts[3].split('_')[1] + ' iters = ' + folder_parts[3].split('_')[3] + ' gridesize = ' + folder_parts[3].split('_')[-1]
+        elif folder_parts[2] == 'fgsm':
+            attack_name = folder_parts[2] + ' @ epsilon = ' + folder_parts[3].split('_')[1]
+        elif folder_parts[2] == 'edge_attack':
+            attack_name = 'Edge Attack' + ' @ epsilon = ' + folder_parts[3].split('_')[1] + ' iters = ' + folder_parts[3].split('_')[3] + ' gridesize = ' + folder_parts[3].split('_')[-1]
+        elif folder_parts[2] == 'baseline':
+            attack_name = folder_parts[2]
+        elif folder_parts[2] == 'pgdattack':
+            attack_name = 'PGD Attack' + ' @ epsilon = ' + folder_parts[3].split('_')[1] + ' $\\alpha =$ ' + folder_parts[3].split('_')[3] + ' iters = ' + folder_parts[3].split('_')[5]
+        else:
+            attack_name = "Unknown Attack"
 
-    with open(file, 'r') as f:
-        lines = f.readlines()
-        x = []
-        for line in lines:
-            num = line.strip().split('maxDets=')[1].split('=')[1].strip()
-            x.append(num)
+        with open(file, 'r') as f:
+            lines = f.readlines()
+            x = []
+            for line in lines:
+                num = line.strip().split('maxDets=')[1].split('=')[1].strip()
+                x.append(num)
 
-        print(get_table(x, model_name, attack_name))
+            print(get_table(x, model_name, attack_name))
