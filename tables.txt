@@ -1427,6 +1427,35 @@
         \toprule
         Metric & IoU & Area & Value \\
         \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.014 \\
+        & 0.50 & all & 0.043 \\
+        & 0.75 & all & 0.005 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.010 \\
+        & 0.50:0.95 & large & 0.038 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.026 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.037 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.038 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.019 \\
+        & 0.50:0.95 & large & 0.089 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on PGD Attack @ epsilon = 0.031 $\alpha =$ 0.007843 iters = 20}
+    \label{tab:coco_YOLOv5_PGD Attack @ epsilon = 0.031 $\alpha =$ 0.007843 iters = 20}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
         \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.331 \\
         & 0.50 & all & 0.526 \\
         & 0.75 & all & 0.336 \\
@@ -1445,6 +1474,151 @@
     }
     \caption{COCO evaluation results for Faster R-CNN on PGD Attack @ epsilon = 0.031 $\alpha =$ 0.007843 iters = 10}
     \label{tab:coco_Faster R-CNN_PGD Attack @ epsilon = 0.031 $\alpha =$ 0.007843 iters = 10}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.014 \\
+        & 0.50 & all & 0.047 \\
+        & 0.75 & all & 0.005 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.009 \\
+        & 0.50:0.95 & large & 0.037 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.026 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.038 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.038 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.017 \\
+        & 0.50:0.95 & large & 0.089 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on PGD Attack @ epsilon = 0.031 $\alpha =$ 0.007843 iters = 10}
+    \label{tab:coco_YOLOv5_PGD Attack @ epsilon = 0.031 $\alpha =$ 0.007843 iters = 10}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.180 \\
+        & 0.50 & all & 0.317 \\
+        & 0.75 & all & 0.184 \\
+        & 0.50:0.95 & small & 0.132 \\
+        & 0.50:0.95 & medium & 0.210 \\
+        & 0.50:0.95 & large & 0.219 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.186 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.309 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.322 \\
+        & 0.50:0.95 & small & 0.210 \\
+        & 0.50:0.95 & medium & 0.360 \\
+        & 0.50:0.95 & large & 0.342 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for Faster R-CNN on PGD Attack @ epsilon = 0.062 $\alpha =$ 0.015686 iters = 10}
+    \label{tab:coco_Faster R-CNN_PGD Attack @ epsilon = 0.062 $\alpha =$ 0.015686 iters = 10}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.010 \\
+        & 0.50 & all & 0.030 \\
+        & 0.75 & all & 0.004 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.006 \\
+        & 0.50:0.95 & large & 0.022 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.018 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.026 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.026 \\
+        & 0.50:0.95 & small & 0.001 \\
+        & 0.50:0.95 & medium & 0.009 \\
+        & 0.50:0.95 & large & 0.059 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on PGD Attack @ epsilon = 0.062 $\alpha =$ 0.015686 iters = 10}
+    \label{tab:coco_YOLOv5_PGD Attack @ epsilon = 0.062 $\alpha =$ 0.015686 iters = 10}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.147 \\
+        & 0.50 & all & 0.260 \\
+        & 0.75 & all & 0.153 \\
+        & 0.50:0.95 & small & 0.120 \\
+        & 0.50:0.95 & medium & 0.164 \\
+        & 0.50:0.95 & large & 0.195 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.162 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.277 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.291 \\
+        & 0.50:0.95 & small & 0.209 \\
+        & 0.50:0.95 & medium & 0.318 \\
+        & 0.50:0.95 & large & 0.320 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for Faster R-CNN on PGD Attack @ epsilon = 0.062 $\alpha =$ 0.015686 iters = 20}
+    \label{tab:coco_Faster R-CNN_PGD Attack @ epsilon = 0.062 $\alpha =$ 0.015686 iters = 20}
+\end{table}
+
+    
+
+\begin{table}[h!]
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{tabular}{lccc}
+        \toprule
+        Metric & IoU & Area & Value \\
+        \midrule
+        \textbf{Average Precision (AP)} & 0.50:0.95 & all & 0.009 \\
+        & 0.50 & all & 0.028 \\
+        & 0.75 & all & 0.004 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.004 \\
+        & 0.50:0.95 & large & 0.022 \\
+        \midrule
+        \textbf{Average Recall (AR)} & 0.50:0.95 & all (maxDets=1) & 0.017 \\
+        & 0.50:0.95 & all (maxDets=10) & 0.022 \\
+        & 0.50:0.95 & all (maxDets=100) & 0.022 \\
+        & 0.50:0.95 & small & 0.000 \\
+        & 0.50:0.95 & medium & 0.009 \\
+        & 0.50:0.95 & large & 0.051 \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{COCO evaluation results for YOLOv5 on PGD Attack @ epsilon = 0.062 $\alpha =$ 0.015686 iters = 20}
+    \label{tab:coco_YOLOv5_PGD Attack @ epsilon = 0.062 $\alpha =$ 0.015686 iters = 20}
 \end{table}
 
     
