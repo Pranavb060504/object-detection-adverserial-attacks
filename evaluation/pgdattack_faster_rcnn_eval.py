@@ -1,9 +1,16 @@
 """ 
 Run the script using the following command:
 
-    python faster_rcnn_eval.py  --max_samples "max_samples"
-
+    python pgdattack_faster_rcnn_eval.py  --max_samples "max_samples" --epsilon "epsilon" --alpha "alpha" --steps "steps"
+    
+where:
 max_samples: any integer value, default is 1000
+epsilon: any float value, default is 0.031
+alpha: any float value, default is 0.007843
+steps: any integer value, default is 10
+
+This script performs a PGD attack on images from the COCO dataset using a Faster R-CNN model. It saves the adversarial images and evaluates the model's performance on these images, comparing it to the original images. The results are saved in a specified directory.
+# -*- coding: utf-8 -*-
 """
 
 import torch
