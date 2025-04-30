@@ -1,5 +1,3 @@
-from PIL import Image
-img = Image.open("../../../ferrari.png").convert("RGB")
 import torch
 from torchvision.models.detection import fasterrcnn_resnet50_fpn
 from torchvision.transforms import functional as F
@@ -13,7 +11,7 @@ steps = 10
 device = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
 model = fasterrcnn_resnet50_fpn(weights='FasterRCNN_ResNet50_FPN_Weights.DEFAULT').to(device).train()  
 
-image_path = "../../../"
+image_path = "../../../../../../"
 image_name = "ferrari.png"
 image_file = image_path + image_name
 
