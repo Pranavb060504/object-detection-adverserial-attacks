@@ -8,7 +8,7 @@ import cv2
 from tqdm import tqdm
 import os
 
-def edge_faster_rcnn(image_path, epsilon=1, iterations=100, grid_size=10, target_confidence=0.25, confidence_threshold=0.5, nms_threshold=0.3):
+def edge_attack_faster_rcnn(image_path, epsilon=1, iterations=100, grid_size=10, target_confidence=0.25, confidence_threshold=0.5, nms_threshold=0.3):
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = fasterrcnn_resnet50_fpn(pretrained=True)
